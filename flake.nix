@@ -40,12 +40,14 @@
               owner = "illiteratewriter";
               repo = "todoist-rs";
               rev = "v0.0.7";
-              sha256 = "sha256-AXywlwAPETUA1SlRvJsX8CEhjXqzebF5zWUOwPD/pbQ=";
+              sha256 = "sha256-1+upllLxjHwWfoBvh07uqiVXROl8BHgF+WvaQWnTGJk=";
             };
 
-            cargoLock = {
-              lockFile = ./Cargo.lock;
-            };
+	    cargoHash = "sha256-10LjNscOGpOmytFaOqEr3HWjmn3BoBBezG4puiDV9Ys=";
+	    #cargoLock = null; #"${src}/Cargo.lock";
+	    #packages.todoist-rs = todoist-rs;
+	    #defaultPackage = todoist-rs;
+
 
             nativeBuildInputs = [ pkgs.pkg-config ];
             buildInputs = [ pkgs.openssl ];
